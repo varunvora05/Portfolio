@@ -1,0 +1,95 @@
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 100vh;
+    width: 100vw; 
+    background-color: rgb(0, 0, 0); 
+    color: white;
+    font-family: 'DejaVu Sans Mono', monospace;
+  }
+
+  .intro {
+    width: 50%;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+    margin-left: 10vh;
+  }
+  
+  .intro h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffcb05; 
+    border-bottom: 2px solid #ffcb05; 
+    display: inline-block;
+    
+  }
+  
+  .intro p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    animation: fadeInText 2s ease-in;
+  }
+  
+
+  @keyframes typingEffect {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blinkCaret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ffcb05; }
+  }
+
+  @keyframes fadeInText {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+
+  
+  .interactive-image{
+    margin-right: 10vw;
+  }
+  
+  
+  .interactive-image img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    float: left;
+  }
+  
+
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+   @media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        min-height: 100vh; 
+    }
+  
+    .intro, .interactive-image {
+        max-width: 100%;
+        text-align: center;
+    }
+  
+    .intro h1 {
+        font-size: 2rem;
+    }
+  
+    .interactive-image img {
+        width: 250px;
+    }
+  }
+  
