@@ -1,15 +1,14 @@
 .about {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10rem;
-    min-height: 100vh; 
-    background-color: rgb(0, 0, 0); 
+    gap: clamp(3rem, 8vw, 8rem);
+    padding: 8rem max(1.5rem, calc((100% - 1200px) / 2)) 3rem;
+    min-height: 100vh;
+    background-color: #000;
     color: white;
     font-family: 'DejaVu Sans Mono', monospace;
   }
-  
-
   .photo img {
     width: 300px;
     height: auto;
@@ -26,7 +25,7 @@
   
 
   .description {
-    max-width: 50%;
+    max-width: 700px;
     text-align: left;
     animation: fadeIn 1.5s ease-in-out;
   }
@@ -39,7 +38,7 @@
   }
   
   .description p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
     margin-top: 1rem;
     line-height: 1.6;
     animation: fadeInText 2s ease-in;
@@ -60,7 +59,8 @@
   @media (max-width: 768px) {
     .about {
         flex-direction: column;
-        padding: 2rem;
+        gap: 1rem;
+        padding: 7rem 1.25rem 2.5rem;
     }
   
     .photo img {
@@ -80,5 +80,4 @@
     .description p {
         font-size: 1.2rem;
     }
-  }
-  
+}
